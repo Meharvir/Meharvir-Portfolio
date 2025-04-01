@@ -1,0 +1,21 @@
+/* Styling for the About page */
+.about-page {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .about-page h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-page p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
