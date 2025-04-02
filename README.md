@@ -12,8 +12,15 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 ## Technologies Used
 
 -   **Frontend**: React, CSS
--   **Backend (if applicable)**: Node.js (for contact form or any server-side functionality)
--   **Other Tools**: GitHub Pages for deployment, Visual Studio Code for development
+-   **Other Tools**:
+    -   **Development**: Visual Studio Code, Git, GitHub
+    -   **Deployment**: GitHub Pages
+    -   **Version Control**: Git, GitHub
+    -   **Package Management**: npm
+    -   **UI Components**: React Router, React Particles
+    -   **Additional Libraries**: EmailJS (for contact form), React TSParticles
+    -   **Browser Tools**: Chrome DevTools
+    -   **Design Tools**: CSS3, Flexbox, Grid Layout
 
 ## Getting Started
 
