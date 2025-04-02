@@ -1,7 +1,7 @@
 {
   "name": "my-new-portfolio",
   "version": "0.1.0",
-  "homepage": "https://Meharvir.github.io/Meharvir-Portfolio",
+  "homepage": "https://meharvir.github.io/Meharvir-Portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
