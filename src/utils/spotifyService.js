@@ -1,6 +1,8 @@
 // Configuration
 const SPOTIFY_CLIENT_ID = '1cbb5cbb12f245b4a57b7988aaa94b0e'; // Meharvir's Spotify Client ID
-const SPOTIFY_REDIRECT_URI = window.location.origin;
+const SPOTIFY_REDIRECT_URI = process.env.NODE_ENV === 'development' 
+  ? 'http://localhost:3002'  // Changed to port 3002
+  : window.location.origin;
 const SPOTIFY_AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
 const SPOTIFY_API_ENDPOINT = 'https://api.spotify.com/v1';
 const SPOTIFY_SCOPES = [
@@ -11,17 +13,25 @@ const SPOTIFY_SCOPES = [
 
 // Helper to get the authentication URL
 export const getAuthUrl = () => {
-  return `${SPOTIFY_AUTH_ENDPOINT}?client_id=${SPOTIFY_CLIENT_ID}&redirect_uri=${encodeURIComponent(
+  const url = `${SPOTIFY_AUTH_ENDPOINT}?client_id=${SPOTIFY_CLIENT_ID}&redirect_uri=${encodeURIComponent(
     SPOTIFY_REDIRECT_URI
   )}&scope=${encodeURIComponent(
     SPOTIFY_SCOPES.join(' ')
   )}&response_type=token&show_dialog=true`;
+  
+  console.log('Auth URL:', url); // Debug log
+  return url;
 };
 
 // Handle authentication callback
 export const handleAuthCallback = () => {
   const hash = window.location.hash;
-  if (!hash) return null;
+  console.log('Hash:', hash); // Debug log
+  
+  if (!hash) {
+    console.log('No hash found in URL');
+    return null;
+  }
 
   const tokenParams = hash
     .substring(1)
@@ -31,6 +41,8 @@ export const handleAuthCallback = () => {
       acc[key] = decodeURIComponent(value);
       return acc;
     }, {});
+
+  console.log('Token params:', tokenParams); // Debug log
 
   // Store token in localStorage
   if (tokenParams.access_token) {
@@ -43,9 +55,11 @@ export const handleAuthCallback = () => {
     // Clean URL
     window.location.hash = '';
     
+    console.log('Token stored successfully'); // Debug log
     return tokenParams.access_token;
   }
   
+  console.log('No access token found in params'); // Debug log
   return null;
 };
 

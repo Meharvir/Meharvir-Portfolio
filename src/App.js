@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
@@ -13,51 +13,42 @@ import Particles from './Components/Particles';
 import ResumeChat from './Components/ResumeChat';
 import EasterEgg from './Components/EasterEgg';
 import SpotifyWidget from './Components/SpotifyWidget';
+import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 
 function App() {
   const [isGameVisible, setIsGameVisible] = useState(false);
-  
-  // Initialize theme on load
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
-  }, []);
 
   const toggleGame = () => {
     setIsGameVisible(prevState => !prevState);
   };
 
   return (
-    <Router>
-      <ScrollProgress />
-      <ThemeToggle />
-      <Particles density={100} colorScheme="theme" />
-      <ResumeChat />
-      <SpotifyWidget />
-      <EasterEgg />
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route index element={<Home />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Projects" element={<Projects />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </main>
-        <ScrollToTop />
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <ScrollProgress />
+        <ThemeToggle />
+        <Particles density={100} colorScheme="theme" />
+        <ResumeChat />
+        <SpotifyWidget />
+        <EasterEgg />
+        <div className="app">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route index element={<Home />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/Projects" element={<Projects />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
+          <ScrollToTop />
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

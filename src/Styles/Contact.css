@@ -360,20 +360,23 @@
    ========================================================================== */
 @media (max-width: 768px) {
   .contact-hero {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem;
     margin-bottom: 2rem;
   }
 
   .contact-hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 
   .contact-hero p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    max-width: 100%;
+    padding: 0 1rem;
   }
 
   .contact-content {
-    padding: 0 1rem;
+    padding: 1.5rem;
   }
 
   .contact-grid {
@@ -391,23 +394,93 @@
   }
 
   .contact-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
   }
 
   .contact-details h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
-  .social-links {
-    gap: 1rem;
+  .contact-details p {
+    font-size: 0.9rem;
   }
 
-  .social-link {
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-control {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .form-control:focus {
+    padding: 0.9rem 1.1rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 2rem 0.8rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+    padding: 0 0.8rem;
+  }
+
+  .contact-content {
+    padding: 1rem;
+  }
+
+  .contact-info-section,
+  .contact-form-section {
+    padding: 1rem;
+  }
+
+  .contact-info-item {
+    padding: 0.8rem;
+  }
+
+  .contact-icon {
     width: 40px;
     height: 40px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .contact-details h3 {
+    font-size: 1rem;
+  }
+
+  .contact-details p {
+    font-size: 0.85rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
 

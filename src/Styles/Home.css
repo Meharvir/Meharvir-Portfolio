@@ -998,80 +998,113 @@ body {
   transform: translateY(0);
 }
 
-/* Responsive Design */
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .home-container {
     padding: 0 1rem;
   }
 
-  .glitch {
-    font-size: 3rem;
-  }
-
-  .typewriter {
-    font-size: 1.2rem;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    margin-bottom: 2rem;
-  }
-
-  .contact-content {
-    padding: 2rem;
-  }
-
-  .contact-info {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .contact-item {
-    padding: 1.5rem;
-  }
-
-  .social-links {
-    gap: 1rem;
-  }
-
-  .social-link {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
+  .hero-section {
+    padding: 1rem;
+    min-height: 90vh;
   }
 
   .name-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    line-height: 1.2;
   }
 
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+    margin: 1rem 0;
   }
 
   .cta-buttons {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 2rem auto;
   }
 
   .cta-button {
     width: 100%;
-    max-width: 300px;
-    text-align: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
 
-  .hobbies-section {
-    padding: 1.5rem;
-  }
-
-  .hobbies-grid {
+  .skills-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
   }
 
-  .hobby-item {
+  .skill-category {
+    padding: 1.2rem;
+  }
+
+  .project-card {
+    margin: 1rem 0;
+    padding: 1.2rem;
+  }
+
+  .contact-content {
     padding: 1.5rem;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .contact-item {
+    padding: 1rem;
+  }
+
+  .social-links {
+    gap: 0.8rem;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .name-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .cta-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .skill-category {
+    padding: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .contact-item {
+    padding: 0.8rem;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
   }
 }
 
