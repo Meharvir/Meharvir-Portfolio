@@ -20,3 +20,37 @@ To view the portfolio locally, follow the steps below:
 1. **Clone this repository**
    ```bash
    git clone https://github.com/Meharvir-Portfolio/Meharvir-Portfolio.git
+   ## Getting Started
+
+2. **Clone this repository**
+   ```bash
+   git clone [https://github.com/Meharvir-Portfolio/Meharvir-Portfolio.git](https://github.com/Meharvir-Portfolio/Meharvir-Portfolio.git)
+Navigate into the project directory
+
+Bash
+
+cd Meharvir-Portfolio
+Install dependencies
+
+Bash
+
+npm install
+Run the app locally
+
+Bash
+
+npm start
+This will open the app in your browser at http://localhost:3000.
+
+To build the app for production
+
+Bash
+
+npm run build
+This will generate a build/ folder containing the production build of your app. You can deploy it or serve it locally.
+
+To deploy the app to GitHub Pages
+
+Bash
+
+npm run deploy
