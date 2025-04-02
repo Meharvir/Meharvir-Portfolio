@@ -2,6 +2,8 @@
 
 Welcome to my personal portfolio website! This project showcases my work, skills, and experience in the field of software development, data science, and project management. You can explore my projects, view my resume, and contact me for potential collaborations or opportunities.
 
+You can access the live website here: [https://meharvir.github.io/](https://meharvir.github.io/)
+
 ## Features
 
 -   **About Me**: Get to know more about my background, education, and professional journey.
