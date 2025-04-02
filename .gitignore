@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Cursor installer
+public/CursorUserSetup-x64-0.48.6.exe

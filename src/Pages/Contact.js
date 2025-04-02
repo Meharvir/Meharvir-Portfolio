@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Styles/Contact.css';
+import Particles from '../Components/Particles';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -28,13 +29,13 @@ function Contact() {
 
   return (
     <div className="contact-page">
+      <Particles />
       <div className="contact-container">
         <div className="contact-header">
-          <h1>Get in Touch</h1>
-          <p>I'd love to hear from you! Feel free to reach out.</p>
-          <a href={process.env.PUBLIC_URL + "/Randhawa-Meharvir-Resume.pdf"} className="resume-button" download>
-            <i className="fas fa-download"></i> Download Resume
-          </a>
+          <div className="header-text">
+            <h1>Get in Touch</h1>
+            <p>I'd love to hear from you! Feel free to reach out.</p>
+          </div>
         </div>
 
         <div className="contact-content">
@@ -54,9 +55,18 @@ function Contact() {
               </div>
             </div>
             <div className="social-links">
-              <a href="#" className="social-link"><i className="fab fa-github"></i></a>
-              <a href="#" className="social-link"><i className="fab fa-linkedin"></i></a>
-              <a href="#" className="social-link"><i className="fab fa-twitter"></i></a>
+              <a href="https://github.com/Meharvir" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="social-link">
+                <i className="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/meharvir-randhawa-558b372a0/" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="social-link">
+                <i className="fab fa-linkedin"></i>
+              </a>
             </div>
           </div>
 
